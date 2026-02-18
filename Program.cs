@@ -61,6 +61,36 @@ namespace class___object
         }
 
     }
+    class clsEmployee { 
+        private int _ID;
+        private string _Gender;
+
+        public int IO {
+
+            set { 
+            
+                _ID = value;
+            
+            }
+            get
+            {
+                return _ID;
+            }
+        
+        }
+        public string Gender
+        {
+
+            set
+            {
+                _Gender = value;
+            }
+            get
+            {
+                return _Gender;
+            }
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -93,7 +123,7 @@ namespace class___object
             */
 
             // static members
-
+            /*
             clsStatic FirstObj = new clsStatic();
             clsStatic SecondObj = new clsStatic();
 
@@ -110,7 +140,13 @@ namespace class___object
 
             Console.WriteLine("Static method2 result = {0}", clsStatic.Method2()) ;
             Console.WriteLine("static x2:= {0}", clsStatic.x2);
+            */
+            clsEmployee FirstEmployee= new clsEmployee();
 
+            FirstEmployee.IO = 1;
+            FirstEmployee.Gender = "M";
+            Console.WriteLine("Employee ID: {0}", FirstEmployee.IO);
+            Console.WriteLine("Employee Gender: {0}", FirstEmployee.Gender);
             Console.ReadKey();
 
         }
