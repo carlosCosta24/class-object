@@ -63,15 +63,10 @@ namespace class___object
     }
     class clsEmployee { 
         private int _ID;
-        private string _Gender;
+        private string _Gender = string.Empty;
 
         public int IO {
-
-            set { 
-            
-                _ID = value;
-            
-            }
+            //read only property
             get
             {
                 return _ID;
@@ -143,7 +138,6 @@ namespace class___object
             */
             clsEmployee FirstEmployee= new clsEmployee();
 
-            FirstEmployee.IO = 1;
             FirstEmployee.Gender = "M";
             Console.WriteLine("Employee ID: {0}", FirstEmployee.IO);
             Console.WriteLine("Employee Gender: {0}", FirstEmployee.Gender);
