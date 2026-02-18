@@ -74,6 +74,21 @@ namespace class___object
             get;
         }
     }
+    static class Settings
+    {
+        public static int DayNumber { 
+            
+            get { return DateTime.Today.Day; } 
+        }
+        public static string DayName { 
+            get { return DateTime.Today.DayOfWeek.ToString(); }
+        }
+        public static string ProjectPath
+        {
+            get;
+            set;
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
@@ -124,11 +139,19 @@ namespace class___object
             Console.WriteLine("Static method2 result = {0}", clsStatic.Method2()) ;
             Console.WriteLine("static x2:= {0}", clsStatic.x2);
             */
+            /*
             clsEmployee FirstEmployee= new clsEmployee();
        
             FirstEmployee.Gender = "M";
             Console.WriteLine("Employee ID: {0}", FirstEmployee.IO);
             Console.WriteLine("Employee Gender: {0}", FirstEmployee.Gender);
+            /*/
+
+            Console.WriteLine(Settings.DayNumber);
+            Console.WriteLine(Settings.DayName);
+
+            Settings.ProjectPath = @"C:\MyProjects\";
+            Console.WriteLine(Settings.ProjectPath);
             Console.ReadKey();
 
         }
