@@ -62,28 +62,16 @@ namespace class___object
 
     }
     class clsEmployee { 
-        private int _ID;
-        private string _Gender = string.Empty;
-
+        //auto implemented prop
         public int IO {
             //read only property
-            get
-            {
-                return _ID;
-            }
-        
+            get;
         }
         public string Gender
         {
 
-            set
-            {
-                _Gender = value;
-            }
-            get
-            {
-                return _Gender;
-            }
+            set;
+            get;
         }
     }
     internal class Program
@@ -137,7 +125,7 @@ namespace class___object
             Console.WriteLine("static x2:= {0}", clsStatic.x2);
             */
             clsEmployee FirstEmployee= new clsEmployee();
-
+       
             FirstEmployee.Gender = "M";
             Console.WriteLine("Employee ID: {0}", FirstEmployee.IO);
             Console.WriteLine("Employee Gender: {0}", FirstEmployee.Gender);
